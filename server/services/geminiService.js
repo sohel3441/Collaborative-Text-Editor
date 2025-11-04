@@ -1,5 +1,3 @@
-// services/geminiService.js
-// import { GoogleGenerativeAI } from "@google/generative-ai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 let genAI = null;

@@ -48,27 +48,6 @@ export const register = async (req, res, next) => {
   }
 };
 
-// // LOGIN
-// export const login = async (req, res, next) => {
-//   try {
-//     const { email, password } = req.body;
-//     const user = await User.findOne({ email });
-//     if (!user) return res.status(401).json({ message: 'Invalid credentials' });
-
-//     const valid = await bcrypt.compare(password, user.password);
-//     if (!valid) return res.status(401).json({ message: 'Invalid credentials' });
-
-//     const { accessToken, refreshToken } = generateTokens(user);
-//     user.refreshToken = refreshToken;
-//     await user.save();
-
-//     setAuthCookies(res, accessToken, refreshToken);
-//     res.json({ message: 'Login successful', user: { id: user._id, name: user.name, email, role: user.role } });
-//   } catch (err) {
-//     next(err);
-//   }
-// };
-
 // LOGIN
 export const login = async (req, res, next) => {
   try {
